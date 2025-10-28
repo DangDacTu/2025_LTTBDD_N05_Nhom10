@@ -1,0 +1,58 @@
+name: audio_book
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  audioplayers: ^6.5.1
+  google_fonts: ^6.2.0
+  sqflite: ^2.3.2
+  path: ^1.8.3
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  build_runner: ^2.4.8
+  hive_generator: ^2.0.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/vogiadinh.jpg
+    - assets/audios/vogiadinh.mp3
+    - assets/icons/icon_phenikaa.jpg
+    - assets/images/tuoitre.jpg
+    - assets/images/tumathien.jpg
+    - assets/images/ngoninda.jpg
+    - assets/images/vnsu.jpg
+    - assets/images/kiepsau.jpg
+    - assets/images/wall.jpg
+    - assets/images/nhachu.jpg
+    - assets/images/quyenluc.jpg
+    - assets/images/nghiatinh.jpg
+    - assets/images/daovang.jpg
+    - assets/images/giau.jpg
+    - assets/images/depbuon.jpg
+    - assets/images/conan.jpg
+    - assets/icons/Illustration.jpg
+    - assets/icons/Illustration (1).jpg
+    - assets/icons/Illustration (2).jpg
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Light.ttf
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Medium.ttf
+

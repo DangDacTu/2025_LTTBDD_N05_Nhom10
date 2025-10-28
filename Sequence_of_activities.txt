@@ -1,0 +1,11 @@
+splash - onboarding - login - welcome - presonalization - loading - home 
+
+Home: 
+
+home 
+
+search 
+
+library 
+
+setting 
