@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 import '../models/audiobook.dart';
 import '../widgets/book_card.dart';
 import 'setting_screen.dart';
@@ -16,9 +17,9 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color(0xFF0F0F29),
         elevation: 0,
-        title: const Text(
-          'AudioBooks.',
-          style: TextStyle(
+        title: Text(
+          'app_title'.tr(), // ✅ đổi từ home_title -> app_title
+          style: const TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
           ),
@@ -41,25 +42,26 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // DANH MỤC
-            const Text(
-              'Danh mục',
-              style: TextStyle(
+            Text(
+              'category'.tr(), // ✅ đổi từ categories -> category
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(height: 8),
+
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  _buildCategory('Nghệ thuật'),
-                  _buildCategory('Kinh doanh'),
-                  _buildCategory('Tiểu sử'),
-                  _buildCategory('Hài'),
-                  _buildCategory('Giáo dục'),
-                  _buildCategory('Tâm lý'),
+                  _buildCategory('art'.tr()),
+                  _buildCategory('business'.tr()),
+                  _buildCategory('biography'.tr()),
+                  _buildCategory('comedy'.tr()),
+                  _buildCategory('education'.tr()),
+                  _buildCategory('psychology'.tr()),
                 ],
               ),
             ),
@@ -67,28 +69,28 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 24),
 
             // 🔹 ĐỀ XUẤT CHO BẠN
-            _buildSectionTitle('Đề xuất cho bạn'),
+            _buildSectionTitle('recommended_for_you'.tr()), // ✅ đổi từ recommended -> recommended_for_you
             const SizedBox(height: 8),
             _buildImageList(books),
 
             const SizedBox(height: 24),
 
             // 🔹 BÁN CHẠY
-            _buildSectionTitle('Bán chạy'),
+            _buildSectionTitle('best_sellers'.tr()),
             const SizedBox(height: 8),
             _buildBestSellerList(books),
 
             const SizedBox(height: 24),
 
             // 🔹 MỚI PHÁT HÀNH
-            _buildSectionTitle('Mới phát hành'),
+            _buildSectionTitle('new_releases'.tr()),
             const SizedBox(height: 8),
             _buildImageList(books),
 
             const SizedBox(height: 24),
 
-            // 🔹 PHỔ BIẾN HIỆN HÀNH
-            _buildSectionTitle('Phổ biến hiện nay'),
+            // 🔹 PHỔ BIẾN HIỆN NAY
+            _buildSectionTitle('trending_now'.tr()), // ✅ đổi từ trending -> trending_now
             const SizedBox(height: 8),
             _buildImageList(books),
           ],
@@ -122,12 +124,14 @@ class HomeScreen extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        const Text('Xem thêm', style: TextStyle(color: Colors.blueAccent)),
+        Text(
+          'see_more'.tr(),
+          style: const TextStyle(color: Colors.blueAccent),
+        ),
       ],
     );
   }
 
-  // 🔹 HIỂN THỊ ẢNH THUẦN (đề xuất, mới phát hành, phổ biến)
   Widget _buildImageList(List<AudioBook> books) {
     return SizedBox(
       height: 220,
@@ -165,7 +169,6 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  // 🔹 BÁN CHẠY — giao diện có thông tin
   Widget _buildBestSellerList(List<AudioBook> books) {
     return SizedBox(
       height: 200,
@@ -233,9 +236,9 @@ class HomeScreen extends StatelessWidget {
                             }),
                           ),
                           const SizedBox(height: 5),
-                          const Text(
-                            '1,000+ lượt nghe',
-                            style: TextStyle(
+                          Text(
+                            'listen_count'.tr(),
+                            style: const TextStyle(
                               color: Colors.grey,
                               fontSize: 11,
                             ),
