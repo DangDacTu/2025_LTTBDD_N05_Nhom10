@@ -3,11 +3,17 @@ import '../models/audiobook.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'player_screen.dart';
 import '../database/app_database.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class BookDetailScreen extends StatefulWidget {
   final AudioBook book;
   final VoidCallback onBack;
-  const BookDetailScreen({super.key, required this.book, required this.onBack});
+
+  const BookDetailScreen({
+    super.key,
+    required this.book,
+    required this.onBack,
+  });
 
   @override
   State<BookDetailScreen> createState() => _BookDetailScreenState();
@@ -41,7 +47,7 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
     await AppDatabase.insertBook(widget.book);
     setState(() => isSaved = true);
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Đã lưu sách vào thư viện!')),
+      SnackBar(content: Text('saved_to_library'.tr())),
     );
   }
 
@@ -113,7 +119,7 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
                       color: Colors.white,
                     ),
                     label: Text(
-                      isPlaying ? 'Tạm dừng' : 'Phát',
+                      isPlaying ? 'pause'.tr() : 'play'.tr(),
                       style: const TextStyle(color: Colors.white),
                     ),
                     style: ElevatedButton.styleFrom(
@@ -140,7 +146,7 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
                       color: Colors.white,
                     ),
                     label: Text(
-                      isSaved ? 'Đã lưu' : 'Lưu',
+                      isSaved ? 'saved'.tr() : 'save'.tr(),
                       style: const TextStyle(color: Colors.white),
                     ),
                     style: ElevatedButton.styleFrom(
@@ -158,25 +164,25 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
               const SizedBox(height: 30),
 
               // --- Tóm tắt ---
-              const Text(
-                'Tóm tắt sách',
-                style: TextStyle(
+              Text(
+                'summary'.tr(),
+                style: const TextStyle(
                   fontSize: 20,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               const SizedBox(height: 8),
-              const Text(
-                '“Việt Nam sử lược” là cuốn sách lịch sử đầu tiên viết bằng chữ Quốc ngữ, do Trần Trọng Kim biên soạn và xuất bản năm 1920...',
-                style: TextStyle(fontSize: 16, color: Colors.white70),
+              Text(
+                'summary_text'.tr(),
+                style: const TextStyle(fontSize: 16, color: Colors.white70),
               ),
               const SizedBox(height: 30),
 
               // --- Bình luận ---
-              const Text(
-                'Bình luận',
-                style: TextStyle(
+              Text(
+                'comments'.tr(),
+                style: const TextStyle(
                   fontSize: 20,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
@@ -212,7 +218,7 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
               TextField(
                 style: const TextStyle(color: Colors.white),
                 decoration: InputDecoration(
-                  hintText: 'Nhập bình luận của bạn...',
+                  hintText: 'enter_comment'.tr(),
                   hintStyle: const TextStyle(color: Colors.white54),
                   filled: true,
                   fillColor: const Color(0xFF1B1B3A),

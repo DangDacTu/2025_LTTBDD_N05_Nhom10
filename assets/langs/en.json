@@ -1,0 +1,19 @@
+{
+    "hello": "Hello",
+    "my_library": "My Library",
+    "save": "Save",
+    "saved": "Saved",
+    "search": "Search",
+    "settings": "Settings",
+    "comments": "Comments",
+    "summary": "Book Summary",
+    "saved_to_library": "Book saved to your library!",
+    "play": "Play",
+    "pause": "Pause",
+    "book_summary": "Book Summary",
+    "summary_text": "\"A Brief History of Vietnam\" is the first historical book written in Vietnamese script by Tran Trong Kim in 1920...",
+    "enter_comment": "Enter your comment...",
+    "you": "You",
+    "change_language": "Change language"
+    
+}

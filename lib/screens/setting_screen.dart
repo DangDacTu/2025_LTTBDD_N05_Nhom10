@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'profile_screen.dart';
 import 'login_screen.dart';
 
@@ -19,9 +20,9 @@ class SettingsScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color(0xFF1E1E3C),
         title: const Text(
-          'Cài đặt',
+          'settings',
           style: TextStyle(color: Colors.white),
-        ),
+        ).tr(),
         iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: Column(
@@ -96,6 +97,29 @@ class SettingsScreen extends StatelessWidget {
               );
             },
           ),
+          _buildSettingTile(
+            context,
+            icon: Icons.language,
+            title: 'Ngôn ngữ',
+            trailing: DropdownButton<Locale>(
+              value: context.locale,
+              items: const [
+                DropdownMenuItem(
+                  value: Locale('vi'),
+                  child: Text('Tiếng Việt'),
+                ),
+                DropdownMenuItem(
+                  value: Locale('en'),
+                  child: Text('English'),
+                ),
+              ],
+              onChanged: (locale) {
+                if (locale != null) {
+                  context.setLocale(locale);
+                }
+              },
+            ),
+          ),
 
           const Spacer(),
 
@@ -150,8 +174,8 @@ class SettingsScreen extends StatelessWidget {
           title,
           style: const TextStyle(color: Colors.white, fontSize: 16),
         ),
-        trailing: trailing ??
-            const Icon(Icons.chevron_right, color: Colors.white54),
+        trailing:
+            trailing ?? const Icon(Icons.chevron_right, color: Colors.white54),
         onTap: onTap,
       ),
     );

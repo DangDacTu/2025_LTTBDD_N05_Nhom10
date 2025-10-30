@@ -17,6 +17,7 @@ dependencies:
   path: ^1.8.3
   hive: ^2.2.3
   hive_flutter: ^1.1.0
+  easy_localization: ^3.0.3    
 
 dev_dependencies:
   flutter_test:
@@ -48,6 +49,7 @@ flutter:
     - assets/icons/Illustration.jpg
     - assets/icons/Illustration (1).jpg
     - assets/icons/Illustration (2).jpg
+    - assets/langs/
 
   fonts:
     - family: Poppins
