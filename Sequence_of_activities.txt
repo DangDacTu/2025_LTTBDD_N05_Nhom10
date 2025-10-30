@@ -1,4 +1,4 @@
-splash - onboarding - login - welcome - presonalization - loading - home 
+splash - student info - onboarding - login - welcome - presonalization - loading - home 
 
 Home: 
 
