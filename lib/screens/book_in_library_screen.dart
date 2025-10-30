@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:easy_localization/easy_localization.dart';
 import '../models/audiobook.dart';
 import 'player_screen.dart';
 
@@ -25,12 +26,12 @@ class _BookInLibraryScreenState extends State<BookInLibraryScreen> {
     {
       'user': 'Ryan Dang',
       'comment':
-          'Phần thứ ba của Harry Potter thật sự cuốn hút với cốt truyện kịch tính và nhiều tình tiết bất ngờ. Không khí trong phim trở nên u ám hơn, nhưng cũng sâu sắc và cảm xúc hơn. Mình rất thích cách câu chuyện hé lộ sự thật về Sirius Black và quá khứ của cha mẹ Harry.'
+          'Phần thứ ba của Harry Potter thật sự cuốn hút với cốt truyện kịch tính và nhiều tình tiết bất ngờ.'
     },
     {
       'user': 'Tony Bui',
       'comment':
-          '“Việt Nam sử lược” là một cuốn sách tuyệt vời giúp người đọc hiểu rõ lịch sử dân tộc từ thời dựng nước đến thời Pháp thuộc. Văn phong của Trần Trọng Kim rất mạch lạc, dễ hiểu và đầy cảm xúc.'
+          '“Việt Nam sử lược” là một cuốn sách tuyệt vời giúp người đọc hiểu rõ lịch sử dân tộc.'
     },
   ];
 
@@ -78,7 +79,7 @@ class _BookInLibraryScreenState extends State<BookInLibraryScreen> {
                     color: Colors.white,
                   ),
                   label: Text(
-                    isPlaying ? 'Tạm dừng' : 'Phát ngay',
+                    isPlaying ? 'pause'.tr() : 'play'.tr(),
                     style: const TextStyle(color: Colors.white),
                   ),
                   onPressed: () {
@@ -103,9 +104,9 @@ class _BookInLibraryScreenState extends State<BookInLibraryScreen> {
               const SizedBox(height: 30),
 
               // Tiêu đề tóm tắt
-              const Text(
-                'Tóm tắt sách',
-                style: TextStyle(
+              Text(
+                'book_summary'.tr(),
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
@@ -114,16 +115,16 @@ class _BookInLibraryScreenState extends State<BookInLibraryScreen> {
               const SizedBox(height: 8),
 
               Text(
-                '“Việt Nam sử lược” là cuốn sách lịch sử đầu tiên viết bằng chữ Quốc ngữ, do Trần Trọng Kim biên soạn và xuất bản năm 1920, nhằm giúp người Việt có cái nhìn tổng quát, dễ hiểu về lịch sử dân tộc.',
+                'summary_text'.tr(),
                 style: const TextStyle(color: Colors.white70, fontSize: 16),
               ),
 
               const SizedBox(height: 30),
 
               // Tiêu đề bình luận
-              const Text(
-                'Bình luận',
-                style: TextStyle(
+              Text(
+                'comments'.tr(),
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
@@ -167,19 +168,19 @@ class _BookInLibraryScreenState extends State<BookInLibraryScreen> {
                 ),
                 child: TextField(
                   style: const TextStyle(color: Colors.white),
-                  decoration: const InputDecoration(
-                    hintText: 'Nhập bình luận của bạn...',
-                    hintStyle: TextStyle(color: Colors.white54),
+                  decoration: InputDecoration(
+                    hintText: 'enter_comment'.tr(),
+                    hintStyle: const TextStyle(color: Colors.white54),
                     border: InputBorder.none,
                     contentPadding:
-                        EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-                    suffixIcon: Icon(Icons.send, color: Colors.white),
+                        const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                    suffixIcon: const Icon(Icons.send, color: Colors.white),
                   ),
                   onSubmitted: (value) {
                     if (value.trim().isNotEmpty) {
                       setState(() {
                         comments.add({
-                          'user': 'Bạn',
+                          'user': 'You',
                           'comment': value.trim(),
                         });
                       });

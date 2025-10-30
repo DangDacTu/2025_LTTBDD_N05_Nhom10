@@ -14,6 +14,26 @@
     "summary_text": "\"A Brief History of Vietnam\" is the first historical book written in Vietnamese script by Tran Trong Kim in 1920...",
     "enter_comment": "Enter your comment...",
     "you": "You",
-    "change_language": "Change language"
-    
+    "change_language": "Change language",
+    "app_title": "AudioBooks.",
+    "category": "Categories",
+    "art": "Art",
+    "business": "Business",
+    "biography": "Biography",
+    "comedy": "Comedy",
+    "education": "Education",
+    "psychology": "Psychology",
+    "recommended_for_you": "Recommended for You",
+    "best_sellers": "Best Sellers",
+    "new_releases": "New Releases",
+    "trending_now": "Trending Now",
+    "see_more": "See More",
+    "listen_count": "1,000+ listens",
+    "profile": "View Profile",
+    "notifications": "Notifications",
+    "storage": "Storage",
+    "about_app": "About Audio Book",
+    "about_description": "Free and convenient audiobook app.",
+    "language": "Language",
+    "logout": "Logout"
 }
