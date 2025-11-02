@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'personalization_screen.dart';
 import 'loading_screen.dart';
 
@@ -46,18 +47,18 @@ class WelcomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      'Welcome !',
-                      style: TextStyle(
+                    Text(
+                      'welcome_title'.tr(),
+                      style: const TextStyle(
                         color: Colors.white70,
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
                     const SizedBox(height: 20),
-                    const Text(
-                      'Tìm thấy điều\nbạn đang\ntìm kiếm',
-                      style: TextStyle(
+                    Text(
+                      'welcome'.tr(),
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 34,
                         height: 1.2,
@@ -66,9 +67,9 @@ class WelcomeScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    const Text(
-                      'Bằng cách cá nhân hóa tài khoản của bạn, chúng tôi có thể giúp bạn tìm thấy những gì bạn thích.',
-                      style: TextStyle(
+                    Text(
+                      'welcome_personalize_desc'.tr(),
+                      style: const TextStyle(
                         color: Colors.white70,
                         fontSize: 14,
                         height: 1.5,
@@ -95,9 +96,9 @@ class WelcomeScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(12),
                           ),
                         ),
-                        child: const Text(
-                          'Cá nhân hóa tài khoản của bạn',
-                          style: TextStyle(
+                        child: Text(
+                          'personalize_button'.tr(),
+                          style: const TextStyle(
                             fontSize: 16,
                             color: Colors.white,
                           ),
@@ -125,9 +126,9 @@ class WelcomeScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(12),
                           ),
                         ),
-                        child: const Text(
-                          'Bỏ qua',
-                          style: TextStyle(
+                        child: Text(
+                          'skip_button'.tr(),
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 16,
                           ),

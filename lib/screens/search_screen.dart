@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 import '../models/audiobook.dart';
 import 'setting_screen.dart';
 
@@ -15,10 +16,10 @@ class _SearchScreenState extends State<SearchScreen> {
   List<String> searchHistory = [];
 
   final List<Map<String, String>> recommendedCategories = [
-    {'title': 'Kinh doanh', 'icon': '💼'},
-    {'title': 'Cá nhân', 'icon': '👤'},
-    {'title': 'Âm nhạc', 'icon': '🎵'},
-    {'title': 'Nhiếp ảnh', 'icon': '📷'},
+    {'title': 'business', 'icon': '💼'},
+    {'title': 'personal', 'icon': '👤'},
+    {'title': 'music', 'icon': '🎵'},
+    {'title': 'photography', 'icon': '📷'},
   ];
 
   @override
@@ -35,9 +36,9 @@ class _SearchScreenState extends State<SearchScreen> {
         backgroundColor: const Color(0xFF0F0F29),
         elevation: 0,
         centerTitle: true,
-        title: const Text(
-          'Tìm kiếm sách nói',
-          style: TextStyle(
+        title: Text(
+          'search_title'.tr(),
+          style: const TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
             fontSize: 22,
@@ -60,11 +61,11 @@ class _SearchScreenState extends State<SearchScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Thanh tìm kiếm
+            // 🔍 Thanh tìm kiếm
             TextField(
               style: const TextStyle(color: Colors.white),
               decoration: InputDecoration(
-                hintText: 'Tìm kiếm sách hoặc tác giả...',
+                hintText: 'search_hint'.tr(),
                 hintStyle: const TextStyle(color: Colors.white70),
                 prefixIcon: const Icon(Icons.search, color: Colors.white70),
                 filled: true,
@@ -93,10 +94,10 @@ class _SearchScreenState extends State<SearchScreen> {
             ),
             const SizedBox(height: 24),
 
-            // Các thể loại gợi ý
-            const Text(
-              'Thể loại nổi bật',
-              style: TextStyle(
+            // ⭐ Thể loại nổi bật
+            Text(
+              'featured_categories'.tr(),
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
@@ -124,7 +125,7 @@ class _SearchScreenState extends State<SearchScreen> {
                             style: const TextStyle(fontSize: 16)),
                         const SizedBox(width: 6),
                         Text(
-                          cat['title']!,
+                          cat['title']!.tr(),
                           style: const TextStyle(color: Colors.white),
                         ),
                       ],
@@ -135,11 +136,11 @@ class _SearchScreenState extends State<SearchScreen> {
             ),
             const SizedBox(height: 24),
 
-            // Lịch sử tìm kiếm
+            // 🕓 Lịch sử tìm kiếm
             if (searchHistory.isNotEmpty) ...[
-              const Text(
-                'Lịch sử tìm kiếm',
-                style: TextStyle(
+              Text(
+                'search_history'.tr(),
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -164,10 +165,10 @@ class _SearchScreenState extends State<SearchScreen> {
               const SizedBox(height: 24),
             ],
 
-            // Kết quả tìm kiếm
-            const Text(
-              'Kết quả tìm kiếm',
-              style: TextStyle(
+            // 📚 Kết quả tìm kiếm
+            Text(
+              'search_results'.tr(),
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
@@ -177,18 +178,19 @@ class _SearchScreenState extends State<SearchScreen> {
 
             Expanded(
               child: searchQuery.isEmpty
-                  ? const Center(
+                  ? Center(
                       child: Text(
-                        'Nhập từ khóa để bắt đầu tìm kiếm',
-                        style: TextStyle(color: Colors.white54, fontSize: 16),
+                        'no_search_input'.tr(),
+                        style:
+                            const TextStyle(color: Colors.white54, fontSize: 16),
                       ),
                     )
                   : (filteredBooks.isEmpty
-                      ? const Center(
+                      ? Center(
                           child: Text(
-                            'Không tìm thấy sách nào',
-                            style:
-                                TextStyle(color: Colors.white54, fontSize: 16),
+                            'no_books_found'.tr(),
+                            style: const TextStyle(
+                                color: Colors.white54, fontSize: 16),
                           ),
                         )
                       : ListView.separated(

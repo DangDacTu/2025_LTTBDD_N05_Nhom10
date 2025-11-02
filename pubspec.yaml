@@ -30,26 +30,10 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/vogiadinh.jpg
-    - assets/audios/vogiadinh.mp3
-    - assets/icons/icon_phenikaa.jpg
-    - assets/images/tuoitre.jpg
-    - assets/images/tumathien.jpg
-    - assets/images/ngoninda.jpg
-    - assets/images/vnsu.jpg
-    - assets/images/kiepsau.jpg
-    - assets/images/wall.jpg
-    - assets/images/nhachu.jpg
-    - assets/images/quyenluc.jpg
-    - assets/images/nghiatinh.jpg
-    - assets/images/daovang.jpg
-    - assets/images/giau.jpg
-    - assets/images/depbuon.jpg
-    - assets/images/conan.jpg
-    - assets/icons/Illustration.jpg
-    - assets/icons/Illustration (1).jpg
-    - assets/icons/Illustration (2).jpg
     - assets/langs/
+    - assets/images/
+    - assets/icons/
+    - assets/audios/
 
   fonts:
     - family: Poppins

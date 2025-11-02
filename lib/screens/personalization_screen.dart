@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'loading_screen.dart';
 
 class PersonalizationScreen extends StatefulWidget {
@@ -10,16 +11,16 @@ class PersonalizationScreen extends StatefulWidget {
 
 class _PersonalizationScreenState extends State<PersonalizationScreen> {
   final List<String> genres = [
-    'Nghệ thuật',
-    'Kinh doanh',
-    'Tiểu sử',
-    'Hài',
-    'Văn hóa',
-    'Giáo dục',
-    'Triết lý',
-    'Tâm lý',
-    'Công nghệ',
-    'Du lịch',
+    'art'.tr(),
+    'business'.tr(),
+    'biography'.tr(),
+    'comedy'.tr(),
+    'culture'.tr(),
+    'education'.tr(),
+    'philosophy'.tr(),
+    'psychology'.tr(),
+    'technology'.tr(),
+    'travel'.tr(),
   ];
 
   final Set<String> selectedGenres = {};
@@ -32,9 +33,9 @@ class _PersonalizationScreenState extends State<PersonalizationScreen> {
         backgroundColor: const Color(0xFF0F0F29),
         elevation: 0,
         centerTitle: true,
-        title: const Text(
-          'Cá nhân hóa thể loại',
-          style: TextStyle(
+        title: Text(
+          'personalize_genres'.tr(),
+          style: const TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
           ),
@@ -47,9 +48,9 @@ class _PersonalizationScreenState extends State<PersonalizationScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
-                'Chọn các thể loại bạn yêu thích để chúng tôi gợi ý phù hợp hơn:',
-                style: TextStyle(
+              Text(
+                'select_favorite_genres'.tr(),
+                style: const TextStyle(
                   fontSize: 16,
                   color: Colors.white70,
                   height: 1.5,
@@ -125,9 +126,9 @@ class _PersonalizationScreenState extends State<PersonalizationScreen> {
                       borderRadius: BorderRadius.circular(12),
                     ),
                   ),
-                  child: const Text(
-                    'Tiếp tục',
-                    style: TextStyle(
+                  child: Text(
+                    'continue'.tr(),
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 16,
                     ),

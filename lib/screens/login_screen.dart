@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'welcome_screen.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -30,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
       );
     } else {
       setState(() {
-        _error = 'Sai tên đăng nhập hoặc mật khẩu!';
+        _error = 'login_error'.tr();
         _isLoading = false;
       });
     }
@@ -53,9 +54,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(height: 32),
 
                 // 🔹 Tiêu đề
-                const Text(
-                  'Đăng nhập',
-                  style: TextStyle(
+                Text(
+                  'login_title'.tr(),
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
@@ -68,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   controller: _usernameController,
                   style: const TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                    labelText: 'Tên đăng nhập',
+                    labelText: 'username'.tr(),
                     labelStyle: const TextStyle(color: Colors.white70),
                     enabledBorder: OutlineInputBorder(
                       borderSide:
@@ -76,8 +77,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       borderRadius: BorderRadius.circular(8),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide:
-                          const BorderSide(color: Colors.blueAccent, width: 1.5),
+                      borderSide: const BorderSide(
+                          color: Colors.blueAccent, width: 1.5),
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
@@ -89,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   controller: _passwordController,
                   style: const TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                    labelText: 'Mật khẩu',
+                    labelText: 'password'.tr(),
                     labelStyle: const TextStyle(color: Colors.white70),
                     enabledBorder: OutlineInputBorder(
                       borderSide:
@@ -97,8 +98,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       borderRadius: BorderRadius.circular(8),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide:
-                          const BorderSide(color: Colors.blueAccent, width: 1.5),
+                      borderSide: const BorderSide(
+                          color: Colors.blueAccent, width: 1.5),
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
@@ -132,9 +133,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     child: _isLoading
                         ? const CircularProgressIndicator(color: Colors.white)
-                        : const Text(
-                            'Đăng nhập',
-                            style: TextStyle(fontSize: 18),
+                        : Text(
+                            'login_button'.tr(),
+                            style: const TextStyle(fontSize: 18),
                           ),
                   ),
                 ),
@@ -142,9 +143,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(height: 16),
 
                 // 🔹 Gợi ý tài khoản demo
-                const Text(
-                  'Tài khoản demo: user / 111111',
-                  style: TextStyle(color: Colors.white38, fontSize: 14),
+                Text(
+                  'login_demo_hint'.tr(),
+                  style: const TextStyle(color: Colors.white38, fontSize: 14),
                 ),
               ],
             ),

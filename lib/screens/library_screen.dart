@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:easy_localization/easy_localization.dart';
 import '../models/audiobook.dart';
 import 'setting_screen.dart';
 
@@ -30,9 +31,9 @@ class _LibraryScreenState extends State<LibraryScreen> {
           backgroundColor: const Color(0xFF0F0F29),
           appBar: AppBar(
             backgroundColor: const Color(0xFF0F0F29),
-            title: const Text(
-              'Thư viện của tôi',
-              style: TextStyle(
+            title: Text(
+              'library_title'.tr(), // ✅ khóa ngôn ngữ: tiêu đề "Thư viện của tôi"
+              style: const TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
                 fontSize: 22,
@@ -59,7 +60,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
                 TextField(
                   style: const TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                    hintText: 'Tìm kiếm sách trong thư viện...',
+                    hintText: 'search_library_hint'.tr(), // ✅ hint ngôn ngữ
                     hintStyle: const TextStyle(color: Colors.white54),
                     prefixIcon: const Icon(Icons.search, color: Colors.white),
                     filled: true,
@@ -76,13 +77,14 @@ class _LibraryScreenState extends State<LibraryScreen> {
                   },
                 ),
                 const SizedBox(height: 20),
+
                 // Danh sách sách
                 Expanded(
                   child: books.isEmpty
-                      ? const Center(
+                      ? Center(
                           child: Text(
-                            'Chưa có sách nào trong thư viện.',
-                            style: TextStyle(color: Colors.white70),
+                            'empty_library_message'.tr(), // ✅ thông báo ngôn ngữ
+                            style: const TextStyle(color: Colors.white70),
                           ),
                         )
                       : ListView.separated(
@@ -115,9 +117,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
                               ),
                               subtitle: Text(
                                 book.author,
-                                style: const TextStyle(
-                                  color: Colors.white70,
-                                ),
+                                style: const TextStyle(color: Colors.white70),
                               ),
                               trailing: const Icon(Icons.chevron_right,
                                   color: Colors.white),

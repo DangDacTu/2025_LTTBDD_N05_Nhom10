@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'login_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -12,20 +13,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final PageController _controller = PageController();
   int _currentPage = 0;
 
-  final List<Map<String, String>> _pages = [
+  late final List<Map<String, String>> _pages = [
     {
-      'title': 'Chào mừng!',
-      'desc': 'Khám phá kho sách nói phong phú và hấp dẫn nhất.',
+      'title': 'welcome_title'.tr(),
+      'desc': 'welcome_desc'.tr(),
       'image': 'assets/icons/Illustration.jpg',
     },
     {
-      'title': 'Nghe mọi lúc',
-      'desc': 'Thưởng thức sách mọi nơi, mọi lúc — ngay cả khi ngoại tuyến.',
+      'title': 'listen_anywhere_title'.tr(),
+      'desc': 'listen_anywhere_desc'.tr(),
       'image': 'assets/icons/Illustration (1).jpg',
     },
     {
-      'title': 'Bắt đầu ngay',
-      'desc': 'Cùng trải nghiệm hành trình tri thức cùng AudioBook!',
+      'title': 'get_started_title'.tr(),
+      'desc': 'get_started_desc'.tr(),
       'image': 'assets/icons/Illustration (2).jpg',
     },
   ];
@@ -166,8 +167,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                           child: Text(
                             _currentPage == _pages.length - 1
-                                ? 'Bắt đầu'
-                                : 'Tiếp tục',
+                                ? 'get_started_button'.tr()
+                                : 'next_button'.tr(),
                             style: const TextStyle(
                               color: Colors.white,
                               fontSize: 16,
@@ -176,6 +177,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ),
                       ),
                       const SizedBox(height: 16),
+
                       // ⚪ Nút bỏ qua
                       SizedBox(
                         width: double.infinity,
@@ -194,9 +196,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               borderRadius: BorderRadius.circular(12),
                             ),
                           ),
-                          child: const Text(
-                            'Bỏ qua',
-                            style: TextStyle(
+                          child: Text(
+                            'skip_button'.tr(),
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 16,
                             ),

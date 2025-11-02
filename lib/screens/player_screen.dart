@@ -2,6 +2,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:easy_localization/easy_localization.dart';
 import '../models/audiobook.dart';
 
 class PlayerScreen extends StatefulWidget {
@@ -24,8 +25,6 @@ class _PlayerScreenState extends State<PlayerScreen>
   @override
   void initState() {
     super.initState();
-
-    // 🎵 Khởi tạo controller (đừng repeat ngay)
     _rotationController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 12),
@@ -33,8 +32,6 @@ class _PlayerScreenState extends State<PlayerScreen>
 
     _player.onPlayerStateChanged.listen((state) {
       setState(() => isPlaying = state == PlayerState.playing);
-
-      // 🔁 Khi phát thì đĩa quay, khi dừng thì dừng mượt
       if (isPlaying) {
         _rotationController.repeat();
       } else {
@@ -66,7 +63,7 @@ class _PlayerScreenState extends State<PlayerScreen>
       }
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Lỗi phát audio: $e')),
+        SnackBar(content: Text('${'audio_error'.tr()}: $e')),
       );
     }
   }
@@ -167,7 +164,6 @@ class _PlayerScreenState extends State<PlayerScreen>
             ),
             const SizedBox(height: 30),
 
-            // Thanh tiến trình
             Slider(
               activeColor: const Color(0xFF7C4DFF),
               inactiveColor: Colors.grey[700],
@@ -192,11 +188,11 @@ class _PlayerScreenState extends State<PlayerScreen>
             ),
             const SizedBox(height: 20),
 
-            // Nút điều khiển
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
+                  tooltip: 'rewind'.tr(),
                   iconSize: 36,
                   color: Colors.white70,
                   icon: const Icon(Icons.replay_10),
@@ -240,6 +236,7 @@ class _PlayerScreenState extends State<PlayerScreen>
                 ),
                 const SizedBox(width: 20),
                 IconButton(
+                  tooltip: 'forward'.tr(),
                   iconSize: 36,
                   color: Colors.white70,
                   icon: const Icon(Icons.forward_10),
@@ -252,7 +249,7 @@ class _PlayerScreenState extends State<PlayerScreen>
             ),
             const SizedBox(height: 20),
             Text(
-              isPlaying ? " Đang phát..." : " Tạm dừng",
+              isPlaying ? 'playing'.tr() : 'paused'.tr(),
               style: const TextStyle(color: Colors.white54, fontSize: 16),
             ),
           ],

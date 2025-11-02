@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart'; // ✅ Thêm dòng này
 import 'home_screen.dart';
 import 'search_screen.dart';
 import '../models/audiobook.dart';
@@ -89,18 +90,18 @@ class _MainMenuScreenState extends State<MainMenuScreen> {
             unselectedItemColor: Colors.white70,
             showUnselectedLabels: true,
             type: BottomNavigationBarType.fixed,
-            items: const [
+            items: [
               BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: 'Trang chủ',
+                icon: const Icon(Icons.home),
+                label: 'home'.tr(), // ✅ dùng key JSON
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.search),
-                label: 'Tìm kiếm',
+                icon: const Icon(Icons.search),
+                label: 'search'.tr(),
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.library_books),
-                label: 'Thư viện',
+                icon: const Icon(Icons.library_books),
+                label: 'library'.tr(),
               ),
             ],
           ),
