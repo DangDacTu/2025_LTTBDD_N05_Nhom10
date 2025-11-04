@@ -1,20 +1,78 @@
-HEAD
-# ktpm-auto
+# AudioBook Flutter App
 
-# audio_book
+Ứng dụng nghe sách nói miễn phí, đa nền tảng (Android, iOS, Web, Desktop) sử dụng Flutter và Hive.
 
-A new Flutter project.
+## Tính năng chính
 
-## Getting Started
+- Hiển thị thư viện sách nói với ảnh bìa, tên, tác giả
+- Tìm kiếm sách theo tên hoặc tác giả
+- Nghe audio sách nói (hỗ trợ phát/tạm dừng, tua)
+- Lưu/xóa sách vào thư viện cá nhân
+- Đa ngôn ngữ: Tiếng Việt và Tiếng Anh (easy_localization)
+- Carousel 3D cho trang chủ
+- Xem chi tiết sách, bình luận, tóm tắt
+- Quản lý dữ liệu bằng Hive (local database)
+- Giao diện hiện đại, dễ sử dụng
 
-This project is a starting point for a Flutter application.
+## Cấu trúc thư mục
 
-A few resources to get you started if this is your first Flutter project:
+```
+lib/
+  models/         // Định nghĩa model AudioBook
+  screens/        // Các màn hình: home, search, library, setting, detail, player,...
+  widgets/        // Các widget dùng lại
+assets/
+  images/         // Ảnh bìa sách
+  audios/         // File audio sách nói
+  langs/          // File ngôn ngữ en.json, vi.json
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Cài đặt & chạy
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-a55eac9 (Initial commit)
+1. **Clone dự án:**
+   ```sh
+   git clone <repo-url>
+   cd audio_book
+   ```
+
+2. **Cài đặt dependencies:**
+   ```sh
+   flutter pub get
+   ```
+
+3. **Chạy app:**
+   - Android/iOS:  
+     ```sh
+     flutter run
+     ```
+   - Web:  
+     ```sh
+     flutter run -d chrome
+     ```
+
+## Thêm dữ liệu mẫu
+
+- Ảnh và audio cần khai báo trong `pubspec.yaml`:
+  ```yaml
+  flutter:
+    assets:
+      - assets/images/
+      - assets/audios/
+      - assets/langs/
+  ```
+
+## Đa ngôn ngữ
+
+- Sử dụng [easy_localization](https://pub.dev/packages/easy_localization)
+- Thay text cứng bằng key và `.tr()`, ví dụ:  
+  ```dart
+  Text('library_title'.tr())
+  ```
+
+## Đóng góp
+
+- Fork và tạo pull request nếu bạn muốn đóng góp thêm tính năng hoặc sửa lỗi.
+
+## License
+
+MIT License. Xem chi tiết trong file [LICENSE](LICENSE).
