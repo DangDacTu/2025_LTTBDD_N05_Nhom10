@@ -16,7 +16,7 @@ Dự án được thực hiện trong khuôn khổ học phần **Lập trình c
 
 | Màn hình splash | Màn hình login | Màn hình Welcome | Màn hình Trang chủ | Màn hình Thư viện | Màn hình Chi tiết sách | Màn hình Tìm kiếm| Màn hình Phát |Màn hình Cài đặt | Màn hình profile |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| ![Splash Screen](assets/images/splash.png) | ![Home Screen](screenshots/home.png) | ![Library Screen](screenshots/library.png) | ![Detail Screen](screenshots/detail.png) | ![Settings Screen](screenshots/settings.png) |
+| ![Splash Screen](assets/images/splash.png) | ![Login Screen](assets/images/login.png) | ![Welcome Screen](assets/images/welcome.png)| ![Home Screen](assets/images/home.png) | ![Library Screen](assets/images/.png) | ![Detail Screen](assets/images/detail_book.png) | ![Sreach Screen](assets/images/sreach.png) | ![Play Screen](assets/images/play.png) | ![Settings Screen](assets/images/setting.png) | ![Profile Screen](assets/images/profile.png) |
 
 ---
 
