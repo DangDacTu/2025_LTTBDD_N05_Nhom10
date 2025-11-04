@@ -60,27 +60,20 @@ Dự án được xây dựng với kiến trúc tách lớp rõ ràng (Models �
 | **Quản lý dữ liệu** | Hive Adapter (`audiobook.g.dart`) |
 
 ---
-## ⚡ Hướng dẫn cài đặt & chạy ứng dụng
+## 🚀 Hướng dẫn cài đặt & chạy ứng dụng
 
-### 1. Cài đặt Flutter SDK
-- Tải và cài đặt Flutter tại [flutter.dev](https://flutter.dev/docs/get-started/install)
-- Kiểm tra cài đặt:
-  ```sh
-  flutter doctor
-  ```
-
-### 2. Clone dự án về máy
+### 1. Clone dự án về máy
 ```sh
 git clone https://github.com/DangDacTu/2025_LTTBDD_N05_Nhom10.git
 cd audio_book
 ```
 
-### 3. Cài đặt các thư viện phụ thuộc
+### 2. Cài đặt các thư viện phụ thuộc
 ```sh
 flutter pub get
 ```
 
-### 4. Chạy ứng dụng
+### 3. Chạy ứng dụng
 - **Android/iOS:**
   ```sh
   flutter run
