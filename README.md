@@ -14,9 +14,9 @@ Dự án được thực hiện trong khuôn khổ học phần **Lập trình c
 
 Ứng dụng mang đến trải nghiệm nghe sách nói hiện đại, trực quan và cá nhân hóa.
 
-| Màn hình Trang chủ | Màn hình Thư viện | Màn hình Chi tiết sách | Màn hình Cài đặt |
-| :---: | :---: | :---: | :---: |
-| ![Home Screen](screenshots/home.png) | ![Library Screen](screenshots/library.png) | ![Detail Screen](screenshots/detail.png) | ![Settings Screen](screenshots/settings.png) |
+| Màn hình splash | Màn hình login | Màn hình Welcome | Màn hình Trang chủ | Màn hình Thư viện | Màn hình Chi tiết sách | Màn hình Tìm kiếm| Màn hình Phát |Màn hình Cài đặt | Màn hình profile |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| ![Splash Screen](assets/images/splash.png) | ![Home Screen](screenshots/home.png) | ![Library Screen](screenshots/library.png) | ![Detail Screen](screenshots/detail.png) | ![Settings Screen](screenshots/settings.png) |
 
 ---
 
