@@ -35,7 +35,6 @@ class _SearchScreenState extends State<SearchScreen> {
       appBar: AppBar(
         backgroundColor: const Color(0xFF0F0F29),
         elevation: 0,
-        centerTitle: true,
         title: Text(
           'search_title'.tr(),
           style: const TextStyle(
@@ -181,8 +180,8 @@ class _SearchScreenState extends State<SearchScreen> {
                   ? Center(
                       child: Text(
                         'no_search_input'.tr(),
-                        style:
-                            const TextStyle(color: Colors.white54, fontSize: 16),
+                        style: const TextStyle(
+                            color: Colors.white54, fontSize: 16),
                       ),
                     )
                   : (filteredBooks.isEmpty

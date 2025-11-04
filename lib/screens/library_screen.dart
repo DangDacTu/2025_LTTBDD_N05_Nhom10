@@ -32,7 +32,8 @@ class _LibraryScreenState extends State<LibraryScreen> {
           appBar: AppBar(
             backgroundColor: const Color(0xFF0F0F29),
             title: Text(
-              'library_title'.tr(), // ✅ khóa ngôn ngữ: tiêu đề "Thư viện của tôi"
+              'library_title'
+                  .tr(), // ✅ khóa ngôn ngữ: tiêu đề "Thư viện của tôi"
               style: const TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
@@ -83,7 +84,8 @@ class _LibraryScreenState extends State<LibraryScreen> {
                   child: books.isEmpty
                       ? Center(
                           child: Text(
-                            'empty_library_message'.tr(), // ✅ thông báo ngôn ngữ
+                            'empty_library_message'
+                                .tr(), // ✅ thông báo ngôn ngữ
                             style: const TextStyle(color: Colors.white70),
                           ),
                         )
@@ -96,32 +98,59 @@ class _LibraryScreenState extends State<LibraryScreen> {
                           ),
                           itemBuilder: (context, index) {
                             final book = books[index];
-                            return ListTile(
-                              contentPadding:
-                                  const EdgeInsets.symmetric(horizontal: 8),
-                              leading: ClipRRect(
-                                borderRadius: BorderRadius.circular(10),
-                                child: Image.asset(
-                                  book.coverUrl,
-                                  width: 50,
-                                  height: 70,
-                                  fit: BoxFit.cover,
+
+                            return Dismissible(
+                              key: Key(book.key
+                                  .toString()), // Dùng key duy nhất cho mỗi sách
+                              direction: DismissDirection
+                                  .endToStart, // Trượt từ phải sang trái
+                              background: Container(
+                                alignment: Alignment.centerRight,
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 20),
+                                color: Colors.redAccent,
+                                child: const Icon(Icons.delete,
+                                    color: Colors.white),
+                              ),
+                              onDismissed: (_) async {
+                                await book.delete();
+
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text(
+                                      '${book.title} ${'deleted_from_library'.tr()}',
+                                    ),
+                                    duration: const Duration(seconds: 2),
+                                  ),
+                                );
+                              },
+                              child: ListTile(
+                                contentPadding:
+                                    const EdgeInsets.symmetric(horizontal: 8),
+                                leading: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Image.asset(
+                                    book.coverUrl,
+                                    width: 50,
+                                    height: 70,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
-                              ),
-                              title: Text(
-                                book.title,
-                                style: const TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
+                                title: Text(
+                                  book.title,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
+                                subtitle: Text(
+                                  book.author,
+                                  style: const TextStyle(color: Colors.white70),
+                                ),
+                                trailing: const Icon(Icons.chevron_right,
+                                    color: Colors.white),
+                                onTap: () => widget.onBookTap(book),
                               ),
-                              subtitle: Text(
-                                book.author,
-                                style: const TextStyle(color: Colors.white70),
-                              ),
-                              trailing: const Icon(Icons.chevron_right,
-                                  color: Colors.white),
-                              onTap: () => widget.onBookTap(book),
                             );
                           },
                         ),

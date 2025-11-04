@@ -89,5 +89,7 @@
     "demo_hint": "Tài khoản demo: user / 111111",
     "welcome": "Tìm thấy điều\nbạn đang\ntìm kiếm",
     "welcome_personalize_desc": "Bằng cách cá nhân hóa tài khoản của bạn, chúng tôi có thể giúp bạn tìm thấy những gì bạn thích.",
-    "personalize_button": "Cá nhân hóa tài khoản của bạn"
+    "personalize_button": "Cá nhân hóa tài khoản của bạn",
+    "title_3d" : "Sách nói cho mọi người",
+    "deleted_from_library" : "xóa khỏi thư viện"
 }

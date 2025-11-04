@@ -89,6 +89,8 @@
     "demo_hint": "Demo account: user / 111111",
     "welcome": "Find what\nyou are\nlooking for",
     "welcome_personalize_desc": "By personalizing your account, we can help you find what you love.",
-    "personalize_button": "Personalize your account"
+    "personalize_button": "Personalize your account",
+    "title_3d" : "Audiobooks for everyone",
+    "deleted_from_library" : "deleted from library"
 
 }

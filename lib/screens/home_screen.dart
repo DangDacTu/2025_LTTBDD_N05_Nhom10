@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import '../models/audiobook.dart';
-import '../widgets/book_card.dart';
 import 'setting_screen.dart';
+import 'more_books_screen.dart';
+import 'book_detail_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   final void Function(AudioBook) onBookTap;
@@ -18,7 +20,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: const Color(0xFF0F0F29),
         elevation: 0,
         title: Text(
-          'app_title'.tr(), // ✅ đổi từ home_title -> app_title
+          'app_title'.tr(),
           style: const TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -41,9 +43,9 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // DANH MỤC
+            // ===== DANH MỤC =====
             Text(
-              'category'.tr(), // ✅ đổi từ categories -> category
+              'category'.tr(),
               style: const TextStyle(
                 color: Colors.white,
                 fontSize: 18,
@@ -68,29 +70,172 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 24),
 
+            // ===== TIÊU ĐỀ CHO CAROUSEL =====
+            Text(
+              'title_3d'.tr(),
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 12),
+
+            // ===== CAROUSEL 3D =====
+            CarouselSlider(
+              options: CarouselOptions(
+                height: 260,
+                enlargeCenterPage: true,
+                viewportFraction: 0.6,
+                enableInfiniteScroll: true,
+                autoPlay: true,
+              ),
+              items: books.map((book) {
+                return GestureDetector(
+                  onTap: () => onBookTap(book),
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 8),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.3),
+                          blurRadius: 8,
+                          offset: const Offset(0, 4),
+                        ),
+                      ],
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset(
+                        book.coverUrl,
+                        fit: BoxFit.cover,
+                        width: double.infinity,
+                        height: 240,
+                      ),
+                    ),
+                  ),
+                );
+              }).toList(),
+            ),
+
+            const SizedBox(height: 24),
+
             // 🔹 ĐỀ XUẤT CHO BẠN
-            _buildSectionTitle('recommended_for_you'.tr()), // ✅ đổi từ recommended -> recommended_for_you
+            _buildSectionTitle(
+              'recommended_for_you'.tr(),
+              onSeeMore: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => MoreBooksScreen(
+                      books: books,
+                      onBookTap: (book) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => BookDetailScreen(
+                              book: book,
+                              onBack: () => Navigator.pop(context),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                );
+              },
+            ),
             const SizedBox(height: 8),
             _buildImageList(books),
 
             const SizedBox(height: 24),
 
             // 🔹 BÁN CHẠY
-            _buildSectionTitle('best_sellers'.tr()),
+            _buildSectionTitle(
+              'best_sellers'.tr(),
+              onSeeMore: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => MoreBooksScreen(
+                      books: books,
+                      onBookTap: (book) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => BookDetailScreen(
+                              book: book,
+                              onBack: () => Navigator.pop(context),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                );
+              },
+            ),
             const SizedBox(height: 8),
             _buildBestSellerList(books),
 
             const SizedBox(height: 24),
 
             // 🔹 MỚI PHÁT HÀNH
-            _buildSectionTitle('new_releases'.tr()),
+            _buildSectionTitle(
+              'new_releases'.tr(),
+              onSeeMore: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => MoreBooksScreen(
+                      books: books,
+                      onBookTap: (book) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => BookDetailScreen(
+                              book: book,
+                              onBack: () => Navigator.pop(context),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                );
+              },
+            ),
             const SizedBox(height: 8),
             _buildImageList(books),
 
             const SizedBox(height: 24),
 
             // 🔹 PHỔ BIẾN HIỆN NAY
-            _buildSectionTitle('trending_now'.tr()), // ✅ đổi từ trending -> trending_now
+            _buildSectionTitle(
+              'trending_now'.tr(),
+              onSeeMore: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => MoreBooksScreen(
+                      books: books,
+                      onBookTap: (book) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => BookDetailScreen(
+                              book: book,
+                              onBack: () => Navigator.pop(context),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                );
+              },
+            ),
             const SizedBox(height: 8),
             _buildImageList(books),
           ],
@@ -112,7 +257,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildSectionTitle(String title) {
+  Widget _buildSectionTitle(String title, {VoidCallback? onSeeMore}) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -124,9 +269,12 @@ class HomeScreen extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        Text(
-          'see_more'.tr(),
-          style: const TextStyle(color: Colors.blueAccent),
+        GestureDetector(
+          onTap: onSeeMore,
+          child: Text(
+            'see_more'.tr(),
+            style: const TextStyle(color: Colors.blueAccent),
+          ),
         ),
       ],
     );
