@@ -95,27 +95,6 @@ flutter pub get
   flutter run -d macos
   flutter run -d linux
   ```
-
-### 5. Lưu ý
-- Đảm bảo đã khai báo đầy đủ tài nguyên trong `pubspec.yaml`:
-  ```yaml
-  flutter:
-    assets:
-      - assets/langs/
-      - assets/images/
-      - assets/icons/
-      - assets/audios/
-  ```
-- Nếu gặp lỗi về asset, hãy chạy lại:
-  ```sh
-  flutter pub get
-  flutter clean
-  flutter pub get
-  ```
-
----
-
-Sau khi hoàn thành các bước trên, bạn có thể sử dụng đầy đủ tính năng của ứng dụng AudioBook!
 ---
 
 ## 📂 Cấu trúc Thư mục
