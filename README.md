@@ -1,4 +1,4 @@
-# 🎧 AudioBook - Ứng dụng Sách nói Flutter
+# 🎧 AudioBook - Ứng dụng Sách nói
 
 ![Flutter 3.x](https://img.shields.io/badge/Flutter-3.x-blue?logo=flutter)
 ![Dart 3.x](https://img.shields.io/badge/Dart-3.x-blue?logo=dart)
