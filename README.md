@@ -1,78 +1,64 @@
-# AudioBook Flutter App
+# 🎧 AudioBook - Ứng dụng Sách nói Flutter
 
-Ứng dụng nghe sách nói miễn phí, đa nền tảng (Android, iOS, Web, Desktop) sử dụng Flutter và Hive.
+![Flutter 3.x](https://img.shields.io/badge/Flutter-3.x-blue?logo=flutter)
+![Dart 3.x](https://img.shields.io/badge/Dart-3.x-blue?logo=dart)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## Tính năng chính
+**AudioBook** là một ứng dụng **nghe sách nói miễn phí**, đa nền tảng (Android, iOS, Web, Desktop) được phát triển bằng **Flutter** và **Hive**.  
+Dự án được thực hiện trong khuôn khổ học phần **Lập trình cho Thiết bị Di động**, tập trung vào **thiết kế UI/UX hiện đại** và **quản lý dữ liệu cục bộ hiệu quả**.
 
-- Hiển thị thư viện sách nói với ảnh bìa, tên, tác giả
-- Tìm kiếm sách theo tên hoặc tác giả
-- Nghe audio sách nói (hỗ trợ phát/tạm dừng, tua)
-- Lưu/xóa sách vào thư viện cá nhân
-- Đa ngôn ngữ: Tiếng Việt và Tiếng Anh (easy_localization)
-- Carousel 3D cho trang chủ
-- Xem chi tiết sách, bình luận, tóm tắt
-- Quản lý dữ liệu bằng Hive (local database)
-- Giao diện hiện đại, dễ sử dụng
+---
 
-## Cấu trúc thư mục
+## 📸 Giao diện & Tính năng Nổi bật
 
-```
+Ứng dụng mang đến trải nghiệm nghe sách nói hiện đại, trực quan và cá nhân hóa.
+
+| Màn hình Trang chủ | Màn hình Thư viện | Màn hình Chi tiết sách | Màn hình Cài đặt |
+| :---: | :---: | :---: | :---: |
+| ![Home Screen](screenshots/home.png) | ![Library Screen](screenshots/library.png) | ![Detail Screen](screenshots/detail.png) | ![Settings Screen](screenshots/settings.png) |
+
+---
+
+## 🌟 Tính năng Chính
+
+- 🎨 **Thư viện sách nói** với ảnh bìa, tên, tác giả  
+- 🔍 **Tìm kiếm thông minh** theo tên hoặc tác giả  
+- ▶️ **Trình phát audio** (phát/tạm dừng, tua nhanh/chậm)  
+- ❤️ **Lưu hoặc xóa sách yêu thích** trong thư viện cá nhân (vuốt để xóa)  
+- 🌐 **Đa ngôn ngữ**: Tiếng Việt & Tiếng Anh (`easy_localization`)  
+- 🌀 **Hiệu ứng carousel 3D** trong trang chủ  
+- 📖 **Xem chi tiết sách**: tóm tắt, bình luận, và thông tin tác giả  
+- 💾 **Quản lý dữ liệu bằng Hive** (lưu offline)  
+- 🧭 **Điều hướng thông minh** và giao diện trực quan, hiện đại  
+
+---
+
+## 🛠️ Kiến trúc & Công nghệ
+
+Dự án được xây dựng với kiến trúc tách lớp rõ ràng (Models – Screens – Widgets – Database).
+
+| Thành phần | Công nghệ sử dụng |
+|-------------|------------------|
+| **Ngôn ngữ lập trình** | Flutter 3.x / Dart 3.x |
+| **Cơ sở dữ liệu** | Hive (Local NoSQL Database) |
+| **Phát audio** | audioplayers |
+| **Đa ngôn ngữ** | easy_localization |
+| **Phông chữ & UI** | google_fonts, carousel_slider |
+| **Quản lý dữ liệu** | Hive Adapter (`audiobook.g.dart`) |
+
+---
+
+## 📂 Cấu trúc Thư mục
+
+```bash
 lib/
-  models/         // Định nghĩa model AudioBook
-  screens/        // Các màn hình: home, search, library, setting, detail, player,...
-  widgets/        // Các widget dùng lại
+├── models/          # Định nghĩa model AudioBook
+├── screens/         # Các màn hình: home, search, library, detail, settings, player
+├── widgets/         # Các widget tái sử dụng
+├── database/        # Xử lý lưu trữ Hive
+└── main.dart        # Điểm khởi đầu ứng dụng
+
 assets/
-  images/         // Ảnh bìa sách
-  audios/         // File audio sách nói
-  langs/          // File ngôn ngữ en.json, vi.json
-```
-
-## Cài đặt & chạy
-
-1. **Clone dự án:**
-   ```sh
-   git clone <repo-url>
-   cd audio_book
-   ```
-
-2. **Cài đặt dependencies:**
-   ```sh
-   flutter pub get
-   ```
-
-3. **Chạy app:**
-   - Android/iOS:  
-     ```sh
-     flutter run
-     ```
-   - Web:  
-     ```sh
-     flutter run -d chrome
-     ```
-
-## Thêm dữ liệu mẫu
-
-- Ảnh và audio cần khai báo trong `pubspec.yaml`:
-  ```yaml
-  flutter:
-    assets:
-      - assets/images/
-      - assets/audios/
-      - assets/langs/
-  ```
-
-## Đa ngôn ngữ
-
-- Sử dụng [easy_localization](https://pub.dev/packages/easy_localization)
-- Thay text cứng bằng key và `.tr()`, ví dụ:  
-  ```dart
-  Text('library_title'.tr())
-  ```
-
-## Đóng góp
-
-- Fork và tạo pull request nếu bạn muốn đóng góp thêm tính năng hoặc sửa lỗi.
-
-## License
-
-MIT License. Xem chi tiết trong file [LICENSE](LICENSE).
+├── images/          # Ảnh bìa sách
+├── audios/          # File audio
+└── langs/           # File ngôn ngữ en.json, vi.json
