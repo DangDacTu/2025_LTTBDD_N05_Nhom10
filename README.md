@@ -92,3 +92,15 @@ audio_book/
 │
 ├── pubspec.yaml                       # Khai báo thư viện và tài nguyên
 └── README.md                          # Mô tả và hướng dẫn dự án
+
+```
+---
+## Thông Tin Nhóm
+| Thành viên | Mã số sinh viên | Email |
+|-------------|------------------|------|
+| Đặng Đắc Tú | 23010619 | 23010610@st.phenikaa-uni.edu.vn|
+
+* **GitHub:** [github.com/Audio_Book_App](https://github.com/DangDacTu/2025_LTTBDD_N05_Nhom10)
+---
+
+
