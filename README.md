@@ -30,7 +30,7 @@ Dự án được thực hiện trong khuôn khổ học phần **Lập trình c
     <td align="center"><img src="assets/images/profile.png" alt="Profile Screen" height="300"><br><b>Hồ sơ cá nhân</b></td>
   </tr>
 </table>
----
+
 
 ## 🌟 Tính năng Chính
 
