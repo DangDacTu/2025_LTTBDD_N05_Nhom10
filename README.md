@@ -111,6 +111,45 @@ audio_book/
 └── README.md       # Giới thiệu, hướng dẫn sử dụng và thông tin dự án
 ```
 ---
+## 📊 Kết quả & Đánh giá
+
+### Kết quả đạt được
+
+- Ứng dụng AudioBook đã hoàn thiện các chức năng cơ bản:  
+  - Đăng nhập, onboarding
+  - Hiển thị thư viện sách nói, tìm kiếm, xem chi tiết, nghe audio  
+  - Lưu/xóa sách vào thư viện cá nhân  
+  - Đa ngôn ngữ (Tiếng Việt/Anh), giao diện hiện đại, responsive  
+  - Quản lý dữ liệu cục bộ bằng Hive, hiệu ứng carousel 3D  
+  - Chạy tốt trên Android, iOS, Web, Desktop
+
+- Đáp ứng đúng yêu cầu của học phần Lập trình cho Thiết bị Di động.
+
+### Đánh giá
+
+- **Ưu điểm:**
+  - Giao diện đẹp, dễ sử dụng, thân thiện với người dùng
+  - Tốc độ phản hồi nhanh, thao tác mượt mà
+  - Hỗ trợ đa nền tảng, dễ mở rộng thêm tính năng
+  - Quản lý dữ liệu hiệu quả với Hive
+  - Tích hợp đa ngôn ngữ, phù hợp nhiều đối tượng
+
+- **Nhược điểm:**
+  - Chưa có chức năng đăng ký tài khoản, đồng bộ dữ liệu online
+  - Chưa có phân quyền người dùng, quản lý bình luận nâng cao
+  - Một số tính năng nâng cao (thống kê, đề xuất AI) chưa triển khai
+
+### Đề xuất phát triển
+
+- Thêm chức năng đăng ký, đăng nhập bằng tài khoản online
+- Đồng bộ thư viện cá nhân qua cloud
+- Phát triển hệ thống bình luận, đánh giá sách
+- Tích hợp AI đề xuất sách phù hợp
+- Nâng cấp giao diện, thêm nhiều thể loại sách
+
+---
+*AudioBook là sản phẩm thực tế cho học phần, sẵn sàng mở rộng và phát triển thêm trong tương lai.*
+---
 ## Thông Tin Nhóm
 | Thành viên | Mã số sinh viên | Email |
 |-------------|------------------|------|
