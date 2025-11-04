@@ -8,7 +8,8 @@
 Dự án được thực hiện trong khuôn khổ học phần **Lập trình cho Thiết bị Di động**, tập trung vào **thiết kế UI/UX hiện đại** và **quản lý dữ liệu cục bộ hiệu quả**.
 
 ---
-
+### Link demo : 
+---
 ## 📸 Giao diện & Tính năng Nổi bật
 
 Ứng dụng mang đến trải nghiệm nghe sách nói hiện đại, trực quan và cá nhân hóa.
@@ -98,7 +99,7 @@ audio_book/
 ## Thông Tin Nhóm
 | Thành viên | Mã số sinh viên | Email |
 |-------------|------------------|------|
-| Đặng Đắc Tú | 23010619 | 23010610@st.phenikaa-uni.edu.vn|
+| Đặng Đắc Tú | 23010619 | 23010619@st.phenikaa-uni.edu.vn|
 
 * **GitHub:** [github.com/Audio_Book_App](https://github.com/DangDacTu/2025_LTTBDD_N05_Nhom10)
 ---
