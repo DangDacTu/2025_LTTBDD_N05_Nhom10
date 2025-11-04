@@ -10,14 +10,26 @@ Dự án được thực hiện trong khuôn khổ học phần **Lập trình c
 ---
 ### Link demo : 
 ---
-## 📸 Giao diện & Tính năng Nổi bật
+<h2>📸 Giao diện & Tính năng Nổi bật</h2>
 
-Ứng dụng mang đến trải nghiệm nghe sách nói hiện đại, trực quan và cá nhân hóa.
+<p>Ứng dụng mang đến trải nghiệm <b>nghe sách nói hiện đại, trực quan và cá nhân hóa</b>, với nhiều màn hình được thiết kế tối giản và dễ sử dụng.</p>
 
-| Màn hình splash | Màn hình login | Màn hình Welcome | Màn hình Trang chủ | Màn hình Thư viện | Màn hình Chi tiết sách | Màn hình Tìm kiếm| Màn hình Phát |Màn hình Cài đặt | Màn hình profile |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| ![Splash Screen](assets/images/splash.png) | ![Login Screen](assets/images/login.png) | ![Welcome Screen](assets/images/welcome.png)| ![Home Screen](assets/images/home.png) | ![Library Screen](assets/images/library.png) | ![Detail Screen](assets/images/detail_book.png) | ![Sreach Screen](assets/images/sreach.png) | ![Play Screen](assets/images/play.png) | ![Settings Screen](assets/images/setting.png) | ![Profile Screen](assets/images/profile.png) |
-
+<table>
+  <tr>
+    <td align="center"><img src="assets/images/splash.png" alt="Splash Screen" height="300"><br><b>Splash</b></td>
+    <td align="center"><img src="assets/images/login.png" alt="Login Screen" height="300"><br><b>Đăng nhập</b></td>
+    <td align="center"><img src="assets/images/welcome.png" alt="Welcome Screen" height="300"><br><b>Chào mừng</b></td>
+    <td align="center"><img src="assets/images/home.png" alt="Home Screen" height="300"><br><b>Trang chủ</b></td>
+    <td align="center"><img src="assets/images/library.png" alt="Library Screen" height="300"><br><b>Thư viện</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/images/detail_book.png" alt="Detail Screen" height="300"><br><b>Chi tiết sách</b></td>
+    <td align="center"><img src="assets/images/sreach.png" alt="Search Screen" height="300"><br><b>Tìm kiếm</b></td>
+    <td align="center"><img src="assets/images/play.png" alt="Play Screen" height="300"><br><b>Phát</b></td>
+    <td align="center"><img src="assets/images/setting.png" alt="Settings Screen" height="300"><br><b>Cài đặt</b></td>
+    <td align="center"><img src="assets/images/profile.png" alt="Profile Screen" height="300"><br><b>Hồ sơ cá nhân</b></td>
+  </tr>
+</table>
 ---
 
 ## 🌟 Tính năng Chính
