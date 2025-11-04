@@ -51,14 +51,44 @@ Dự án được xây dựng với kiến trúc tách lớp rõ ràng (Models �
 ## 📂 Cấu trúc Thư mục
 
 ```bash
-lib/
-├── models/          # Định nghĩa model AudioBook
-├── screens/         # Các màn hình: home, search, library, detail, settings, player
-├── widgets/         # Các widget tái sử dụng
-├── database/        # Xử lý lưu trữ Hive
-└── main.dart        # Điểm khởi đầu ứng dụng
-
-assets/
-├── images/          # Ảnh bìa sách
-├── audios/          # File audio
-└── langs/           # File ngôn ngữ en.json, vi.json
+audio_book/
+├── assets/
+│   ├── audios/                 # File audio sách nói (mp3, wav, ...)
+│   ├── images/                 # Ảnh bìa sách
+│   ├── icons/                  # Icon ứng dụng
+│   └── langs/                  # File ngôn ngữ (vi.json, en.json) dùng cho đa ngôn ngữ
+│
+├── lib/
+│   ├── database/
+│   │   └── app_database.dart          # Xử lý dữ liệu cục bộ bằng Hive
+│   │
+│   ├── models/
+│   │   ├── audiobook.dart             # Định nghĩa model AudioBook
+│   │   └── audiobook.g.dart           # File sinh tự động bởi Hive
+│   │
+│   ├── screens/                              # Các màn hình giao diện chính của ứng dụng
+│   │   ├── book_detail_screen.dart                 
+│   │   ├── book_in_library_screen.dart
+│   │   ├── home_screen.dart
+│   │   ├── library_screen.dart
+│   │   ├── loading_screen.dart
+│   │   ├── login_screen.dart
+│   │   ├── main_menu_screen.dart
+│   │   ├── more_books_screen.dart
+│   │   ├── onboarding_screen.dart
+│   │   ├── personalization_screen.dart
+│   │   ├── player_screen.dart
+│   │   ├── profile_screen.dart
+│   │   ├── search_screen.dart
+│   │   ├── setting_screen.dart
+│   │   ├── splash_screen.dart
+│   │   ├── studentinfo_screen.dart
+│   │   └── welcome_screen.dart
+│   │
+│   ├── widgets/
+│   │   └── book_card.dart             # Widget hiển thị sách
+│   │
+│   └── main.dart                      # Điểm khởi đầu của ứng dụng
+│
+├── pubspec.yaml                       # Khai báo thư viện và tài nguyên
+└── README.md                          # Mô tả và hướng dẫn dự án
