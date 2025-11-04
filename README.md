@@ -148,8 +148,6 @@ audio_book/
 - Nâng cấp giao diện, thêm nhiều thể loại sách
 
 ---
-*AudioBook là sản phẩm thực tế cho học phần, sẵn sàng mở rộng và phát triển thêm trong tương lai.*
----
 ## Thông Tin Nhóm
 | Thành viên | Mã số sinh viên | Email |
 |-------------|------------------|------|
