@@ -148,7 +148,7 @@ audio_book/
 - Nâng cấp giao diện, thêm nhiều thể loại sách
 
 ---
-## Thông Tin Nhóm
+## Thông tin sinh viên thực hiện
 | Thành viên | Mã số sinh viên | Email |
 |-------------|------------------|------|
 | Đặng Đắc Tú | 23010619 | 23010619@st.phenikaa-uni.edu.vn|
