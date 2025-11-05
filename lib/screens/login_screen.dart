@@ -40,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0F0F29), // 🎨 Màu nền đồng bộ
+      backgroundColor: const Color(0xFF0F0F29), //  Màu nền đồng bộ
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -48,12 +48,12 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // 🔹 Logo
+                //  Logo
                 Image.asset('assets/icons/icon_phenikaa.jpg',
                     width: 100, height: 100),
                 const SizedBox(height: 32),
 
-                // 🔹 Tiêu đề
+                //  Tiêu đề
                 Text(
                   'login_title'.tr(),
                   style: const TextStyle(
@@ -64,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 const SizedBox(height: 32),
 
-                // 🔹 Ô nhập tên đăng nhập
+                //  Ô nhập tên đăng nhập
                 TextField(
                   controller: _usernameController,
                   style: const TextStyle(color: Colors.white),
@@ -85,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 const SizedBox(height: 16),
 
-                // 🔹 Ô nhập mật khẩu
+                //  Ô nhập mật khẩu
                 TextField(
                   controller: _passwordController,
                   style: const TextStyle(color: Colors.white),
@@ -108,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 const SizedBox(height: 24),
 
-                // 🔹 Hiển thị lỗi (nếu có)
+                //  Hiển thị lỗi (nếu có)
                 if (_error != null)
                   Text(
                     _error!,
@@ -117,7 +117,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 const SizedBox(height: 16),
 
-                // 🔹 Nút đăng nhập
+                //  Nút đăng nhập
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
@@ -142,7 +142,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 const SizedBox(height: 16),
 
-                // 🔹 Gợi ý tài khoản demo
+                //  Gợi ý tài khoản demo
                 Text(
                   'login_demo_hint'.tr(),
                   style: const TextStyle(color: Colors.white38, fontSize: 14),

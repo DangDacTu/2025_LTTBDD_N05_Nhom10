@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:easy_localization/easy_localization.dart'; // ✅ Thêm dòng này
+import 'package:easy_localization/easy_localization.dart'; 
 import 'home_screen.dart';
 import 'search_screen.dart';
 import '../models/audiobook.dart';
@@ -93,7 +93,7 @@ class _MainMenuScreenState extends State<MainMenuScreen> {
             items: [
               BottomNavigationBarItem(
                 icon: const Icon(Icons.home),
-                label: 'home'.tr(), // ✅ dùng key JSON
+                label: 'home'.tr(), //  dùng key JSON
               ),
               BottomNavigationBarItem(
                 icon: const Icon(Icons.search),

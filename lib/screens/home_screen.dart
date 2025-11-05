@@ -121,7 +121,7 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 24),
 
-            // 🔹 ĐỀ XUẤT CHO BẠN
+            //  ĐỀ XUẤT CHO BẠN
             _buildSectionTitle(
               'recommended_for_you'.tr(),
               onSeeMore: () {
@@ -151,7 +151,7 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 24),
 
-            // 🔹 BÁN CHẠY
+            //  BÁN CHẠY
             _buildSectionTitle(
               'best_sellers'.tr(),
               onSeeMore: () {
@@ -181,7 +181,7 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 24),
 
-            // 🔹 MỚI PHÁT HÀNH
+            //  MỚI PHÁT HÀNH
             _buildSectionTitle(
               'new_releases'.tr(),
               onSeeMore: () {
@@ -211,7 +211,7 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 24),
 
-            // 🔹 PHỔ BIẾN HIỆN NAY
+            //  PHỔ BIẾN HIỆN NAY
             _buildSectionTitle(
               'trending_now'.tr(),
               onSeeMore: () {

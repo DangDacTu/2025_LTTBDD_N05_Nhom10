@@ -33,7 +33,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
             backgroundColor: const Color(0xFF0F0F29),
             title: Text(
               'library_title'
-                  .tr(), // ✅ khóa ngôn ngữ: tiêu đề "Thư viện của tôi"
+                  .tr(), //  khóa ngôn ngữ: tiêu đề "Thư viện của tôi"
               style: const TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
@@ -61,7 +61,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
                 TextField(
                   style: const TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                    hintText: 'search_library_hint'.tr(), // ✅ hint ngôn ngữ
+                    hintText: 'search_library_hint'.tr(), // hint ngôn ngữ
                     hintStyle: const TextStyle(color: Colors.white54),
                     prefixIcon: const Icon(Icons.search, color: Colors.white),
                     filled: true,
@@ -85,7 +85,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
                       ? Center(
                           child: Text(
                             'empty_library_message'
-                                .tr(), // ✅ thông báo ngôn ngữ
+                                .tr(), // thông báo ngôn ngữ
                             style: const TextStyle(color: Colors.white70),
                           ),
                         )

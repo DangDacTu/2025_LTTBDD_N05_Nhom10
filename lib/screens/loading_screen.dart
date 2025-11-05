@@ -24,7 +24,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Color(0xFF0F0F29), // 🔹 Màu nền
+      backgroundColor: Color(0xFF0F0F29), //  Màu nền
       body: Center(
         child: Image(
           image: AssetImage('assets/icons/icon_phenikaa.jpg'),
