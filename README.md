@@ -10,15 +10,27 @@ Dự án được thực hiện trong khuôn khổ học phần **Lập trình c
 ---
 ### Link demo : 
 ---
-## 📸 Giao diện & Tính năng Nổi bật
+<h2>📸 Giao diện & Tính năng Nổi bật</h2>
 
-Ứng dụng mang đến trải nghiệm nghe sách nói hiện đại, trực quan và cá nhân hóa.
+<p>Ứng dụng mang đến trải nghiệm <b>nghe sách nói hiện đại, trực quan và cá nhân hóa</b>, với nhiều màn hình được thiết kế tối giản và dễ sử dụng.</p>
 
-| Màn hình Trang chủ | Màn hình Thư viện | Màn hình Chi tiết sách | Màn hình Cài đặt |
-| :---: | :---: | :---: | :---: |
-| ![Home Screen](screenshots/home.png) | ![Library Screen](screenshots/library.png) | ![Detail Screen](screenshots/detail.png) | ![Settings Screen](screenshots/settings.png) |
+<table>
+  <tr>
+    <td align="center"><img src="assets/images/splash.png" alt="Splash Screen" height="300"><br><b>Splash</b></td>
+    <td align="center"><img src="assets/images/login.png" alt="Login Screen" height="300"><br><b>Đăng nhập</b></td>
+    <td align="center"><img src="assets/images/welcome.png" alt="Welcome Screen" height="300"><br><b>Chào mừng</b></td>
+    <td align="center"><img src="assets/images/home.png" alt="Home Screen" height="300"><br><b>Trang chủ</b></td>
+    <td align="center"><img src="assets/images/library.png" alt="Library Screen" height="300"><br><b>Thư viện</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/images/detail_book.png" alt="Detail Screen" height="300"><br><b>Chi tiết sách</b></td>
+    <td align="center"><img src="assets/images/sreach.png" alt="Search Screen" height="300"><br><b>Tìm kiếm</b></td>
+    <td align="center"><img src="assets/images/play.png" alt="Play Screen" height="300"><br><b>Phát</b></td>
+    <td align="center"><img src="assets/images/setting.png" alt="Settings Screen" height="300"><br><b>Cài đặt</b></td>
+    <td align="center"><img src="assets/images/profile.png" alt="Profile Screen" height="300"><br><b>Hồ sơ cá nhân</b></td>
+  </tr>
+</table>
 
----
 
 ## 🌟 Tính năng Chính
 
@@ -48,55 +60,95 @@ Dự án được xây dựng với kiến trúc tách lớp rõ ràng (Models �
 | **Quản lý dữ liệu** | Hive Adapter (`audiobook.g.dart`) |
 
 ---
+## 🚀 Hướng dẫn cài đặt & chạy ứng dụng
+
+### 1. Clone dự án về máy
+```sh
+git clone https://github.com/DangDacTu/2025_LTTBDD_N05_Nhom10.git
+cd audio_book
+```
+
+### 2. Cài đặt các thư viện phụ thuộc
+```sh
+flutter pub get
+```
+
+### 3. Chạy ứng dụng
+- **Android/iOS:**
+  ```sh
+  flutter run
+  ```
+- **Web:**
+  ```sh
+  flutter run -d chrome
+  ```
+- **Windows/macOS/Linux:**
+  ```sh
+  flutter run -d windows
+  flutter run -d macos
+  flutter run -d linux
+  ```
+---
 
 ## 📂 Cấu trúc Thư mục
 
 ```bash
 audio_book/
-├── assets/
-│   ├── audios/                 # File audio sách nói (mp3, wav, ...)
-│   ├── images/                 # Ảnh bìa sách
-│   ├── icons/                  # Icon ứng dụng
-│   └── langs/                  # File ngôn ngữ (vi.json, en.json) dùng cho đa ngôn ngữ
+├── assets/         # Chứa các tài nguyên tĩnh như audio, ảnh, icon, file ngôn ngữ
+│   ├── audios/     # File audio sách nói
+│   ├── images/     # Ảnh bìa sách, hình minh họa
+│   ├── icons/      # Icon ứng dụng, hình minh họa nhỏ
+│   └── langs/      # File ngôn ngữ (vi.json, en.json) dùng cho đa ngôn ngữ
 │
-├── lib/
-│   ├── database/
-│   │   └── app_database.dart          # Xử lý dữ liệu cục bộ bằng Hive
-│   │
-│   ├── models/
-│   │   ├── audiobook.dart             # Định nghĩa model AudioBook
-│   │   └── audiobook.g.dart           # File sinh tự động bởi Hive
-│   │
-│   ├── screens/                              # Các màn hình giao diện chính của ứng dụng
-│   │   ├── book_detail_screen.dart                 
-│   │   ├── book_in_library_screen.dart
-│   │   ├── home_screen.dart
-│   │   ├── library_screen.dart
-│   │   ├── loading_screen.dart
-│   │   ├── login_screen.dart
-│   │   ├── main_menu_screen.dart
-│   │   ├── more_books_screen.dart
-│   │   ├── onboarding_screen.dart
-│   │   ├── personalization_screen.dart
-│   │   ├── player_screen.dart
-│   │   ├── profile_screen.dart
-│   │   ├── search_screen.dart
-│   │   ├── setting_screen.dart
-│   │   ├── splash_screen.dart
-│   │   ├── studentinfo_screen.dart
-│   │   └── welcome_screen.dart
-│   │
-│   ├── widgets/
-│   │   └── book_card.dart             # Widget hiển thị sách
-│   │
-│   └── main.dart                      # Điểm khởi đầu của ứng dụng
+├── lib/            # Chứa toàn bộ mã nguồn chính của ứng dụng Flutter
+│   ├── models/     # Định nghĩa các đối tượng dữ liệu (ví dụ: AudioBook)
+│   ├── screens/    # Các màn hình giao diện chính của ứng dụng
+│   ├── widgets/    # Các widget tái sử dụng (ví dụ: BookCard)
+│   ├── utils/      # Các tiện ích dùng chung (màu sắc, theme, ...)
+│   └── main.dart   # Điểm khởi đầu ứng dụng, cấu hình MaterialApp và EasyLocalization
 │
-├── pubspec.yaml                       # Khai báo thư viện và tài nguyên
-└── README.md                          # Mô tả và hướng dẫn dự án
-
+├── pubspec.yaml    # Khai báo thư viện, tài nguyên và cấu hình dự án Flutter
+└── README.md       # Giới thiệu, hướng dẫn sử dụng và thông tin dự án
 ```
 ---
-## Thông Tin Nhóm
+## 📊 Kết quả & Đánh giá
+
+### Kết quả đạt được
+
+- Ứng dụng AudioBook đã hoàn thiện các chức năng cơ bản:  
+  - Đăng nhập, onboarding
+  - Hiển thị thư viện sách nói, tìm kiếm, xem chi tiết, nghe audio  
+  - Lưu/xóa sách vào thư viện cá nhân  
+  - Đa ngôn ngữ (Tiếng Việt/Anh), giao diện hiện đại, responsive  
+  - Quản lý dữ liệu cục bộ bằng Hive, hiệu ứng carousel 3D  
+  - Chạy tốt trên Android, iOS, Web, Desktop
+
+- Đáp ứng đúng yêu cầu của học phần Lập trình cho Thiết bị Di động.
+
+### Đánh giá
+
+- **Ưu điểm:**
+  - Giao diện đẹp, dễ sử dụng, thân thiện với người dùng
+  - Tốc độ phản hồi nhanh, thao tác mượt mà
+  - Hỗ trợ đa nền tảng, dễ mở rộng thêm tính năng
+  - Quản lý dữ liệu hiệu quả với Hive
+  - Tích hợp đa ngôn ngữ, phù hợp nhiều đối tượng
+
+- **Nhược điểm:**
+  - Chưa có chức năng đăng ký tài khoản, đồng bộ dữ liệu online
+  - Chưa có phân quyền người dùng, quản lý bình luận nâng cao
+  - Một số tính năng nâng cao (thống kê, đề xuất AI) chưa triển khai
+
+### Đề xuất phát triển
+
+- Thêm chức năng đăng ký, đăng nhập bằng tài khoản online
+- Đồng bộ thư viện cá nhân qua cloud
+- Phát triển hệ thống bình luận, đánh giá sách
+- Tích hợp AI đề xuất sách phù hợp
+- Nâng cấp giao diện, thêm nhiều thể loại sách
+
+---
+## Thông tin sinh viên thực hiện
 | Thành viên | Mã số sinh viên | Email |
 |-------------|------------------|------|
 | Đặng Đắc Tú | 23010619 | 23010619@st.phenikaa-uni.edu.vn|
