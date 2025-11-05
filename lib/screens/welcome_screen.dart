@@ -13,7 +13,7 @@ class WelcomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            // 🌙 Hình tròn trang trí nền
+            // Hình tròn trang trí nền
             Positioned(
               top: -60,
               left: -40,
@@ -39,7 +39,7 @@ class WelcomeScreen extends StatelessWidget {
               ),
             ),
 
-            // 🌟 Nội dung chính
+            // Nội dung chính
             Center(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 32.0),
@@ -77,7 +77,7 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 40),
 
-                    // 🔵 Nút "Cá nhân hóa"
+                    // Nút "Cá nhân hóa"
                     SizedBox(
                       width: double.infinity,
                       height: 50,
@@ -107,7 +107,7 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 16),
 
-                    // ⚪ Nút "Bỏ qua"
+                    // Nút "Bỏ qua"
                     SizedBox(
                       width: double.infinity,
                       height: 50,
