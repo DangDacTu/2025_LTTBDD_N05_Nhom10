@@ -58,7 +58,7 @@ class _PersonalizationScreenState extends State<PersonalizationScreen> {
               ),
               const SizedBox(height: 24),
 
-              // 📚 Danh sách thể loại
+              //  Danh sách thể loại
               Expanded(
                 child: ListView(
                   children: genres.map((genre) {
@@ -105,7 +105,7 @@ class _PersonalizationScreenState extends State<PersonalizationScreen> {
               ),
               const SizedBox(height: 16),
 
-              // 🔘 Nút tiếp tục
+              //  Nút tiếp tục
               SizedBox(
                 width: double.infinity,
                 height: 50,
