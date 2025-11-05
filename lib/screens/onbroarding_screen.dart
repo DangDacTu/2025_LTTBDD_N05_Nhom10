@@ -52,7 +52,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       body: SafeArea(
         child: Stack(
           children: [
-            // 🌙 Hình tròn nền
+            //  Hình tròn nền
             Positioned(
               top: -60,
               left: -40,
@@ -78,7 +78,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ),
             ),
 
-            // 🌟 Nội dung chính
+            //  Nội dung chính
             Column(
               children: [
                 Expanded(
@@ -128,7 +128,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ),
 
-                // 🔘 Dấu chấm chỉ trang
+                //  Dấu chấm chỉ trang
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(_pages.length, (index) {
@@ -148,7 +148,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   }),
                 ),
 
-                // 🔵 Nút hành động
+                //  Nút hành động
                 Padding(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 32, vertical: 24),
@@ -178,7 +178,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       ),
                       const SizedBox(height: 16),
 
-                      // ⚪ Nút bỏ qua
+                      //  Nút bỏ qua
                       SizedBox(
                         width: double.infinity,
                         height: 50,
