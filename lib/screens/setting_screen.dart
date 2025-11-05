@@ -109,8 +109,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
             },
           ),
 
-          // 🌍 Chuyển ngôn ngữ (đẹp + không viền)
-      // 🌍 Chuyển ngôn ngữ (màu nền đồng bộ 0xFF1E1E3C, không gradient)
+          // Chuyển ngôn ngữ (đẹp + không viền)
+      // Chuyển ngôn ngữ (màu nền đồng bộ 0xFF1E1E3C, không gradient)
             _buildSettingTile(
               context,
               icon: Icons.language,
