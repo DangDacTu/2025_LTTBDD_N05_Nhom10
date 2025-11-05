@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:easy_localization/easy_localization.dart'; // ✅ thêm dòng này
+import 'package:easy_localization/easy_localization.dart'; 
 
 class ProfileScreen extends StatelessWidget {
   final String avatarUrl;
@@ -24,7 +24,7 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color(0xFF0F0F29),
         title: Text(
-          'profile_title'.tr(), // ✅ dịch tiêu đề
+          'profile_title'.tr(), // dịch tiêu đề
           style: const TextStyle(color: Colors.white),
         ),
         iconTheme: const IconThemeData(color: Colors.white),
@@ -55,7 +55,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
 
-            // ✅ sử dụng key dịch
+            // sử dụng key dịch
             _buildInfoTile(Icons.person, 'username'.tr(), username),
             _buildInfoTile(Icons.email, 'email'.tr(), email),
             _buildInfoTile(Icons.phone, 'phone'.tr(), phone),
