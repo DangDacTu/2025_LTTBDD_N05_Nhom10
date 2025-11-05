@@ -60,7 +60,7 @@ class _SearchScreenState extends State<SearchScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 🔍 Thanh tìm kiếm
+            // Thanh tìm kiếm
             TextField(
               style: const TextStyle(color: Colors.white),
               decoration: InputDecoration(
@@ -93,7 +93,7 @@ class _SearchScreenState extends State<SearchScreen> {
             ),
             const SizedBox(height: 24),
 
-            // ⭐ Thể loại nổi bật
+            // Thể loại nổi bật
             Text(
               'featured_categories'.tr(),
               style: const TextStyle(
@@ -135,7 +135,7 @@ class _SearchScreenState extends State<SearchScreen> {
             ),
             const SizedBox(height: 24),
 
-            // 🕓 Lịch sử tìm kiếm
+            // Lịch sử tìm kiếm
             if (searchHistory.isNotEmpty) ...[
               Text(
                 'search_history'.tr(),
@@ -164,7 +164,7 @@ class _SearchScreenState extends State<SearchScreen> {
               const SizedBox(height: 24),
             ],
 
-            // 📚 Kết quả tìm kiếm
+            // Kết quả tìm kiếm
             Text(
               'search_results'.tr(),
               style: const TextStyle(
