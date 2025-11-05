@@ -7,7 +7,7 @@ import 'screens/splash_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // ✅ Khởi tạo Hive
+  // Khởi tạo Hive
   await Hive.initFlutter();
   Hive.registerAdapter(AudioBookAdapter());
   var box = await Hive.openBox<AudioBook>('books');
@@ -15,7 +15,7 @@ void main() async {
   // (Tùy chọn) Xóa toàn bộ sách cũ
   await box.clear();
 
-  // ✅ Khởi tạo EasyLocalization
+  // Khởi tạo EasyLocalization
   await EasyLocalization.ensureInitialized();
 
   runApp(
@@ -44,7 +44,7 @@ class AudioBookApp extends StatelessWidget {
         primaryColor: const Color(0xFF0F0F29),
       ),
 
-      // 🔹 Thêm các delegate & locale vào đây để EasyLocalization hoạt động
+      // Thêm các delegate & locale vào đây để EasyLocalization hoạt động
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
