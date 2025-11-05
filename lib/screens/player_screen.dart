@@ -99,7 +99,7 @@ class _PlayerScreenState extends State<PlayerScreen>
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // 💿 Đĩa xoay
+            // Đĩa xoay
             AnimatedBuilder(
               animation: _rotationController,
               builder: (_, child) {
