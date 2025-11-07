@@ -7,9 +7,7 @@
 **AudioBook** là một ứng dụng **nghe sách nói miễn phí**, đa nền tảng (Android, iOS, Web, Desktop) được phát triển bằng **Flutter** và **Hive**.  
 Dự án được thực hiện trong khuôn khổ học phần **Lập trình cho Thiết bị Di động**, tập trung vào **thiết kế UI/UX hiện đại**.
 
----
-### Link demo : 
----
+
 <h2>📸 Giao diện & Tính năng Nổi bật</h2>
 
 <p>Ứng dụng mang đến trải nghiệm <b>nghe sách nói hiện đại, trực quan và cá nhân hóa</b>, với nhiều màn hình được thiết kế tối giản và dễ sử dụng.</p>
